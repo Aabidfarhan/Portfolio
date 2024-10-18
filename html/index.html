@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aabid Farhan's Portfolio</title>
+    <link rel="stylesheet" href="../css/styles.css"> <!-- Ensure correct path and extension -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #0077cc, #00aaff);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .about, .skills, .projects, .education, .experience {
+            padding: 20px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0; /* Start hidden */
+            transform: translateY(20px); /* Start translated */
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Transition properties */
+        }
+
+        .about img {
+            max-width: 150px;
+            border-radius: 50%;
+            margin-top: 15px;
+            border: 3px solid #0077cc;
+        }
+
+        h2 {
+            color: #0077cc;
+            margin-bottom: 10px;
+            text-align: left;
+            animation: slideIn 0.5s ease-in;
+        }
+
+        .project {
+            margin-bottom: 15px;
+            transition: transform 0.3s;
+        }
+
+        .project:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0077cc;
+            color: white;
+        }
+
+        footer a {
+            color: #ffdd57;
+            text-decoration: underline;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-20px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @media (max-width: 600px) {
+            .about img {
+                max-width: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>SHAIK AABID FARHAN</h1>
+            <p>Full Stack Developer in Java</p>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:aabidfarhan21@gmail.com">aabidfarhan21@gmail.com</a></p>
+                <p>Phone: +91 9778195626</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="about">
+        <h2>About Me</h2>
+        <p>I am a web designer and developer with over 2 years of experience in creating visually compelling designs and developing innovative web solutions. My goal is to help brands tell their stories through effective and creative visual solutions.</p>
+        <img src="../img/images.jpg" alt="Aabid Farhan" class="profile-pic">
+    </section>
+
+    <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Java</li>
+            <li>MySQL</li>
+            <li>UI/UX Design</li>
+            <li>Digital Marketing</li>
+        </ul>
+    </section>
+
+    <section class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Auto Software Bug Tester</h3>
+            <p><strong>Company:</strong> Labonte Technologies</p>
+            <p><strong>Description:</strong> Developed a comprehensive software tool that tests full-fledged web applications and debugs them, ensuring optimal performance and reliability.</p>
+        </div>
+        <div class="project">
+            <h3>E-Coffee Website Redesign</h3>
+            <p><strong>Description:</strong> Redesigned the user interface for an online store to enhance user experience, resulting in increased customer engagement and sales.</p>
+        </div>
+    </section>
+
+    <section class="education">
+        <h2>Education</h2>
+        <p>B.Tech in Information Technology, KSRCT, Expected Graduation: 2026</p>
+    </section>
+
+    <section class="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li>Software Tester at Labonte Technologies (2022 - Present)</li>
+            <li>Freelance Designer (2023 - Present)</li>
+        </ul>
+    </section>
+
+    <footer>
+        <h2>Contact Me</h2>
+        <p>For inquiries, please reach out via email: <a href="mailto:aabidfarhan21@gmail.com">aabidfarhan21@gmail.com</a></p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            alert("Welcome to my portfolio!");
+            const sections = document.querySelectorAll('section');
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.style.opacity = 1; // Fade in
+                    section.style.transform = 'translateY(0)'; // Move to original position
+                }, index * 300); // Stagger animations by index
+            });
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+window.onload = function() {
+    alert("Welcome to my portfolio!");
+    const sections = document.querySelectorAll('section');
+    sections.forEach((section, index) => {
+        setTimeout(() => {
+            section.style.opacity = 1; // Fade in
+            section.style.transform = 'translateY(0)'; // Move to original position
+        }, index * 300); // Stagger animations by index
+    });
+};
